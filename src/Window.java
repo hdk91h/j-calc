@@ -5,6 +5,7 @@ public class Window extends JFrame {
 
     private JTextField display;
     private double wertEins = 0;
+    private double wertZwei = 0;
     private String operator = "";
     private boolean neueEingabe = true;
 
@@ -69,6 +70,14 @@ public class Window extends JFrame {
 
     public void setWertEins(double wertEins) {
         this.wertEins = wertEins;
+    }
+
+    public double getWertZwei() {
+        return wertZwei;
+    }
+
+    public void setWertZwei(double wertZwei) {
+        this.wertZwei = wertZwei;
     }
 
     public boolean isNeueEingabe() {
