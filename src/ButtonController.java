@@ -41,12 +41,9 @@ public class ButtonController implements ActionListener {
             window.setWertEins(Double.parseDouble(window.getDisplay()));
             window.setOperator(cmd);
             window.setNeueEingabe(true);
-            System.out.println("op");
-            System.out.println(window.getOperator());
         }
 
         if (cmd.equals("=")) {
-            System.out.println("=1");
             window.setWertZwei(Double.parseDouble(window.getDisplay()));
             double ergebnis = 0;
             double ersterWert = window.getWertEins();
@@ -57,8 +54,6 @@ public class ButtonController implements ActionListener {
                 case "/": ergebnis = ersterWert / zweiterWert; break;
                 case "*": ergebnis = ersterWert * zweiterWert; break;
             }
-            System.out.println("=2");
-            System.out.println(ergebnis);
             window.setDisplay(String.valueOf(ergebnis));
             window.setNeueEingabe(true);
         }
