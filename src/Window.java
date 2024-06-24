@@ -25,8 +25,11 @@ public class Window extends JFrame {
     }
 
     private void initDisplay() {
+
         display = new JTextField("0");
         display.setEditable(false);
+        display.setPreferredSize(new Dimension(200, 80));
+        display.setFont(new Font("Serif", Font.BOLD, 30));
         display.setHorizontalAlignment(JTextField.RIGHT);
         add(display, BorderLayout.NORTH);
     }
@@ -43,6 +46,7 @@ public class Window extends JFrame {
 
         for (String label : buttonLabels) {
             JButton button = new JButton(label);
+            button.setFont(new Font("Serif", Font.BOLD, 17));
             button.addActionListener(new ButtonController(this));
             buttonPanel.add(button);
         }
