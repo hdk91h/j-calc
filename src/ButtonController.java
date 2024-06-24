@@ -43,6 +43,27 @@ public class ButtonController implements ActionListener {
             window.setNeueEingabe(true);
         }
 
+        if (cmd.equals("DEL")) {
+            if (!window.getDisplay().equals("0")) {
+                window.setDisplay(window.getDisplay().substring(0, window.getDisplay().length() - 1));
+            }
+            if (window.getDisplay().isEmpty()) {
+                window.setDisplay("0");
+            }
+        }
+
+        if (cmd.equals("MC")) {
+            window.setMemory(0);
+        }
+
+        if (cmd.equals("M")) {
+            if (window.getMemory() == 0) {
+                window.setMemory(Double.parseDouble(window.getDisplay()));
+            } else {
+                window.setDisplay(String.valueOf(window.getMemory()));
+            }
+        }
+
         if (cmd.equals("=")) {
             window.setWertZwei(Double.parseDouble(window.getDisplay()));
             double ergebnis = 0;

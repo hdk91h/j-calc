@@ -9,6 +9,8 @@ public class Window extends JFrame {
     private String operator = "";
     private boolean neueEingabe = true;
 
+    private double memory = 0;
+
     public Window() {
         initWindow();
         initDisplay();
@@ -78,6 +80,14 @@ public class Window extends JFrame {
 
     public void setWertZwei(double wertZwei) {
         this.wertZwei = wertZwei;
+    }
+
+    public double getMemory() {
+        return memory;
+    }
+
+    public void setMemory(double memory) {
+        this.memory = memory;
     }
 
     public boolean isNeueEingabe() {
